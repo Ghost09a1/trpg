@@ -13,8 +13,7 @@ def al_bhed_to_text(al_bhed_text):
         if char in al_bhed_to_english:
             translated_text += al_bhed_to_english[char]
         else:
-            translated_text += char  # Keep non-alphabet characters unchanged
-    return translated_text
+            translated_text += char  # Keep non-alphabet
 
 # Continuously ask for Al Bhed text and translate it to English
 while True:
