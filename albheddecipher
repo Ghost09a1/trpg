@@ -1,0 +1,27 @@
+# Al Bhed to text
+al_bhed_to_english = {
+    'y': 'a', 'p': 'b', 'l': 'c', 't': 'd', 'a': 'e', 'v': 'f', 'k': 'g', 'r': 'h',
+    'e': 'i', 'z': 'j', 'g': 'k', 'm': 'l', 's': 'm', 'h': 'n', 'u': 'o', 'b': 'p',
+    'x': 'q', 'n': 'r', 'c': 's', 'd': 't', 'i': 'u', 'j': 'v', 'f': 'w', 'q': 'x',
+    'o': 'y', 'w': 'z', ' ': ' ',  
+}
+
+# Al Bhed to text
+def al_bhed_to_text(al_bhed_text):
+    translated_text = ""
+    for char in al_bhed_text:
+        if char in al_bhed_to_english:
+            translated_text += al_bhed_to_english[char]
+        else:
+            translated_text += char  # Keep non-alphabet characters unchanged
+    return translated_text
+
+# Continuously ask for Al Bhed text and translate it to English
+while True:
+    al_bhed_input = input("Enter Al Bhed text (or 'quit' to exit): ")
+    
+    if al_bhed_input.lower() == 'quit':
+        break  # Exit the loop 'quit'
+    
+    translated_text = al_bhed_to_text(al_bhed_input)
+    print("Translated to English:", translated_text)
